@@ -1,0 +1,7 @@
+<resources>
+   <declare-styleable name="Popup">
+       <attr name="arrayEntries" format="reference"/>
+       <attr name="arrayValues" format="reference"/>
+       <attr name="arrayDisabled" format="reference"/>
+   </declare-styleable>
+</resources>

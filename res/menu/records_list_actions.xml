@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+ 
+    <item
+        android:id="@+id/msl_delete"
+        android:title="@string/ar_delete"/>
+ 	<item
+        android:id="@+id/msl_save"
+        android:title="@string/ar_save"/>
+</menu>

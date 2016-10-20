@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/action_search"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:icon="@drawable/ic_search"
+        android:title="@android:string/search_go"
+        android:actionLayout="@layout/search_layout"
+        />
+     <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+
+</menu>

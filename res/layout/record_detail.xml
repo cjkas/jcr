@@ -1,0 +1,395 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    style="@style/light_bg"
+    tools:context=".RecordDetailActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/dark_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.76"
+                android:orientation="vertical"
+                 >
+
+                <TextView
+                    android:id="@+id/ar_call_time"
+                    style="@style/hb_textColor_blu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text="time"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/ar_call_duration"
+                    style="@style/hb_textColor_blu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text="duration"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/ar_file_size"
+                    style="@style/hb_textColor_blu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text="file size"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/ar_type"
+                    style="@style/hb_textColor_blu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text="type"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:contentDescription="direction"
+                android:id="@+id/ar_call_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_in_icon" />
+
+            <ImageView
+                android:id="@+id/ar_call_person"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:contentDescription="person"
+                android:src="@drawable/ic_contact_icon" />
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#d7d7d7" >
+
+            <TableRow
+                android:id="@+id/ar_play"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/button_color"
+                android:onClick="jcr_play" >
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:contentDescription="@string/ar_play"
+                    android:minHeight="50dp"
+                    android:padding="@dimen/ico_margin"
+                    android:src="@drawable/ic_playb_ico" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/hb_textColor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.20"
+                    android:gravity="center_vertical"
+                    android:minHeight="50dp"
+                    android:text="@string/ar_play"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ar_delete"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/button_color"
+                android:onClick="jcr_delete" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:contentDescription="@string/ar_delete"
+                    android:minHeight="50dp"
+                    android:padding="@dimen/ico_margin"
+                    android:src="@drawable/ic_trash" />
+
+                <TextView
+                    style="@style/hb_textColor"
+                    android:id="@+id/sp_current"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.20"
+                    android:contentDescription="@string/ar_delete"
+                    android:gravity="center_vertical"
+                    android:text="@string/ar_delete"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ar_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/button_color"
+                android:onClick="jcr_call" >
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:contentDescription="@string/ar_call"
+                    android:minHeight="50dp"
+                    android:padding="@dimen/ico_margin"
+                    android:src="@drawable/ic_call" />
+
+                <TextView
+                    style="@style/hb_textColor"
+                    android:id="@+id/textView9"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.20"
+                    android:gravity="center_vertical"
+                    android:text="@string/ar_call"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ar_contactDetail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/button_color"
+                android:onClick="jcr_detail" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:contentDescription="@string/ar_contact"
+                    android:minHeight="50dp"
+                    android:padding="@dimen/ico_margin"
+                    android:src="@drawable/ic_contact_detail" />
+
+                <TextView
+                    style="@style/hb_textColor"
+                    android:id="@+id/sp_total"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.20"
+                    android:gravity="center_vertical"
+                    android:text="@string/ar_contact"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ar_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/button_color"
+                android:onClick="jcr_history" >
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:contentDescription="@string/ar_history"
+                    android:minHeight="50dp"
+                    android:padding="@dimen/ico_margin"
+                    android:src="@drawable/ic_history" />
+
+                <TextView
+                    style="@style/hb_textColor"
+                    android:id="@+id/link_bc_lic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.20"
+                    android:gravity="center_vertical"
+                    android:text="@string/ar_history"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ar_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/button_color"
+                android:onClick="jcr_share" >
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:contentDescription="@string/ar_share"
+                    android:minHeight="50dp"
+                    android:padding="@dimen/ico_margin"
+                    android:src="@drawable/ic_share" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    style="@style/hb_textColor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.20"
+                    android:gravity="center_vertical"
+                    android:text="@string/ar_share"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ar_ignore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/button_color"
+                android:onClick="jcr_ignore" >
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:contentDescription="@string/ar_ignore_contact_add"
+                    android:minHeight="50dp"
+                    android:padding="@dimen/ico_margin"
+                    android:src="@drawable/ic_cancel" />
+
+                <TextView
+                    style="@style/hb_textColor"
+                    android:id="@+id/ar_text_ingore"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.20"
+                    android:gravity="center_vertical"
+                    android:text="@string/ar_ignore_contact_add"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+            
+            <TableRow
+                android:id="@+id/ar_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/button_color"
+                android:onClick="jcr_record" >
+
+                <ImageView
+                    android:id="@+id/imageView51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:contentDescription="@string/ar_record_contact_add"
+                    android:minHeight="50dp"
+                    android:padding="@dimen/ico_margin"
+                    android:src="@drawable/ic_save" />
+
+                <TextView
+                    style="@style/hb_textColor"
+                    android:id="@+id/ar_text_record"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.20"
+                    android:gravity="center_vertical"
+                    android:text="@string/ar_record_contact_add"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ar_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/button_color"
+                android:onClick="jcr_save" >
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:contentDescription="@string/ar_save"
+                    android:minHeight="50dp"
+                    android:padding="@dimen/ico_margin"
+                    android:src="@drawable/ic_save" />
+
+                <TextView
+                    style="@style/hb_textColor"
+                    android:id="@+id/ar_text_save"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.20"
+                    android:gravity="center_vertical"
+                    android:text="@string/ar_save"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/ar_autoSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/button_color"
+                android:onClick="jcr_autoSave" >
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:contentDescription="@string/ar_auto_save_add"
+                    android:minHeight="50dp"
+                    android:padding="@dimen/ico_margin"
+                    android:src="@drawable/ic_save" />
+
+                <TextView
+                    style="@style/hb_textColor"
+                    android:id="@+id/ar_text_autosave"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.20"
+                    android:gravity="center_vertical"
+                    android:text="@string/ar_auto_save_add"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+</ScrollView>

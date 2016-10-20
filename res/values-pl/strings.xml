@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name_full">Nagrywanie rozmów</string>
+    <string name="app_runnig">Nagrywanie</string>
+    <string name="app_recording">Nagrywanie rozmów włączone</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="title_activity_saved">Zapisane</string>
+    <string name="title_activity_recordings">Nagrania</string>
+    <string name="confirm">potwierdź</string>
+    <string name="are_you_sure">jesteś pewien ?</string>
+    <string name="new_call_recorded">nowe nagranie</string>
+    <string name="recording_is_disabled_enable">Nagrywanie jest wyłączone. Czy chcesz je włączyć ?</string>
+    <string name="ar_play">Odtwórz</string>
+    <string name="ar_delete">Usuń</string>
+    <string name="ar_contact">Pokaż kontakt</string>
+    <string name="ar_history">Historia</string>
+    <string name="ar_ignore_contact_add">Dodaj do ignorowanych</string>
+    <string name="ar_ignore_contact_rem">Usuń z ignorowanych</string>
+    <string name="ar_record_contact_add">Dodaj do nagrywanych</string>
+    <string name="ar_record_contact_rem">Usuń z nagrywanych</string>
+    <string name="ar_save">Zapisz</string>
+    <string name="ar_unsave">Usuń z zapisanych</string>
+    <string name="ar_auto_save_add">Dodaj do Auto zapisu</string>
+    <string name="ar_auto_save_rem">Usuń z Auto zapisu</string>
+    <string name="added_to">Dodany do </string>
+    <string name="removed_from">Usunięty z </string>
+    <string name="no_such_contact">Nie znaleziono kontaktu z numerem </string>
+    <string name="ar_moved_saved">zapisano</string>
+    <string name="ar_moved_back">usunięto z zapisanych</string>
+    <string name="ar_share">Wyślij do</string>
+    <string name="ar_call">Zadzwoń</string>
+    <string name="selected">wybrany</string>
+    <string name="recording">nagrywanie rozpoczęte</string>
+    <string name="settings">Ustawienia</string>
+    <string name="pref_header_general">Główne</string>
+    <string name="pref_header_storeage">Zapisywanie</string>
+    <string name="pref_header_contacts">Kontakty</string>
+    <string name="pref_dropbox">Zapisz w Dropbox (PRO)</string>
+    <string name="pref_gdrive">Zapisz w Google Drive (PRO)</string>
+    <string name="pref_wifi">Wyślij do chumury tylko gdy Wifi</string>
+    <string name="pref_enable_recording">Włącz nagrywanie</string>
+    <string name="pref_language">Język</string>
+    <string name="pref_file_type">Typ pliku</string>
+    <string name="pref_sound_source">Źródło dźwięku</string>
+    <string name="pref_increase_volume">Zwiększ głośność podczas nagrywania</string>
+    <string name="pref_records_size">Ilość trzymanych nagrań</string>
+    <string name="pref_record_contacts">Nagrywaj tylko wybrane kontakty</string>
+    <string name="pref_ignore_contacts">Ignoruj wybrane kontakty</string>
+    <string name="pref_persistent_contacts">Auto zapis - nagrania kontaktów zostaną na zawsze</string>
+    <string name="pref_record_by_shake">Nagrywaj przez potrząsanie (PRO)</string>
+    <string name="pref_record_destination">Katalog docelowy nagrań</string>
+    <string name="pref_record_destination_restore">Przywróć domyślny katalog</string>
+    <string name="pref_record_destination_restored">Domyślny katalog przywrócony</string>
+    <string name="pref_contacts_mode">Nagrywaj wybrane lub ignoruj</string>
+
+    <string-array name="pref_contacts_mode_titles">
+        <item>Ignoruj wybrane</item>
+        <item>Nagrywaj wybrane (PRO)</item>
+    </string-array>
+    <string-array name="pref_language_titles">
+        <item>Systemowy</item>
+        <item>Angielski</item>
+        <item>Polski</item>
+    </string-array>
+    <string-array name="pref_sound_source_titles">
+        <item>przychodzący i wychodzący dźwięk</item>
+        <item>tylko przychodzący dźwięk</item>
+        <item>tylko wychodzący dźwięk</item>
+    </string-array>
+    <string-array name="pref_file_type_titles">
+        <item>3gp</item>
+        <item>amr</item>
+    </string-array>
+    <string-array name="pref_records_size_titles">
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500 (PRO)</item>
+        <item>1000 (PRO)</item>
+    </string-array>
+
+    <integer-array name="pref_records_size_values">
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+    </integer-array>
+
+    <string name="pref_header_notifications">Powiadomienia</string>
+    <string name="pref_title_recording_notification">Powiadomienie nagrywania</string>
+    <string name="pref_title_new_record_notifications">Powiadomienie nowego nagrania</string>
+    <string name="app_title">Just Call Recorder</string>
+    <string name="pref_buy_pro">Kup wersję PRO</string>
+    <string name="connect">połącz</string>
+    <string name="login">loguj</string>
+    <string name="logout">wyloguj</string>
+    <string name="enabled">włączone</string>
+    <string name="disabled">wyłączone</string>
+    <string name="pref_show_about">O programie</string>
+    <string name="choose">wybierz</string>
+
+</resources>

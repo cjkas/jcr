@@ -1,0 +1,121 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+	
+	<PreferenceCategory android:title="@string/pref_header_general" >
+    
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="enable_recording"
+        android:title="@string/pref_enable_recording" />
+   
+    <ListPreference
+        android:defaultValue="sys"
+        android:entries="@array/pref_language_titles"
+        android:entryValues="@array/pref_language_values"
+        android:key="language"
+        android:title="@string/pref_language" />
+    
+	<ListPreference
+        android:defaultValue="in_and_out"
+        android:entries="@array/pref_sound_source_titles"
+        android:entryValues="@array/pref_sound_source_values"
+        android:key="sound_source"
+        android:title="@string/pref_sound_source" />
+
+	<cz.slaw.jcr.PopupDialog
+        android:defaultValue="40"
+        custom:arrayEntries="@array/pref_records_size_titles"
+        custom:arrayValues="@array/pref_records_size_values"
+        custom:arrayDisabled="@array/pref_records_size_pro"
+        android:key="records_size"
+        android:title="@string/pref_records_size" />
+	
+	<ListPreference
+        android:defaultValue="amr"
+        android:entries="@array/pref_file_type_titles"
+        android:entryValues="@array/pref_file_type_titles"
+        android:key="file_type"
+        android:title="@string/pref_file_type" />
+	
+	<CheckBoxPreference
+        android:defaultValue="true"
+        android:key="increase_volume"
+        android:title="@string/pref_increase_volume" />
+	
+	<CheckBoxPreference
+        android:defaultValue="false"
+        android:key="record_by_shake"
+        android:title="@string/pref_record_by_shake" />
+	<!-- 
+	<CheckBoxPreference
+        android:defaultValue="false"
+        android:key="pref_use_float_btn"
+        android:title="@string/pref_use_float_btn" />
+	 -->
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="@string/pref_header_contacts" >
+	
+		<ListPreference 
+		    android:defaultValue="ignore"
+		    android:entries="@array/pref_contacts_mode_titles"
+		    android:entryValues="@array/pref_contacts_mode_values"
+		    android:key="record_or_ignore"
+		    android:title="@string/pref_contacts_mode"
+	    />
+		
+		<cz.slaw.jcr.ContactsDialog
+	        android:key="record_contacts"
+	        android:title="@string/pref_record_contacts" />
+	
+		<cz.slaw.jcr.ContactsDialog
+		    android:key="ignore_contacts"
+	        android:title="@string/pref_ignore_contacts" />
+		
+		<cz.slaw.jcr.ContactsDialog
+	        android:key="persistent_contacts"
+	        android:title="@string/pref_persistent_contacts" />
+		
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/pref_header_storeage" >
+	    <Preference 
+        	android:key="record_destination"
+      	  	android:title="@string/pref_record_destination" />
+   		<Preference 
+        	android:key="record_destination_restore"
+        	android:title="@string/pref_record_destination_restore" />
+   		<Preference 
+   		    android:icon="@drawable/ic_dropbox_android"
+   		    android:key="pref_dropbox" 
+   		    android:title="@string/pref_dropbox"/>
+   		<Preference 
+   		    android:icon="@drawable/ic_gdrive_icon"
+   		    android:key="pref_gdrive" 
+   		    android:title="@string/pref_gdrive"/>
+   		<CheckBoxPreference 
+   		    android:defaultValue="true"
+   		    android:key="wifi_only"
+   		    android:title="@string/pref_wifi"
+   		    />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/pref_header_notifications">
+		<CheckBoxPreference
+	        android:defaultValue="false"
+	        android:key="recording_notification"
+	        android:title="@string/pref_title_recording_notification" />
+	    
+	    <CheckBoxPreference
+	        android:defaultValue="true"
+	        android:key="notifications_new_record"
+	        android:title="@string/pref_title_new_record_notifications" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/app_title">
+		<Preference 
+		    android:key="pref_buy_pro"
+		    android:title="@string/pref_buy_pro"
+		    />
+		<Preference 
+		    android:key="pref_about_app"
+		    android:title="@string/pref_show_about"
+		    />
+	</PreferenceCategory>
+</PreferenceScreen>

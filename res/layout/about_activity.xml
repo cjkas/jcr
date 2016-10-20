@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    style="@style/light_bg"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+     >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="HttpCommons"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/link_apache_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apache License 2.0"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ff0099cc" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="JSON.simple"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/link_apache_21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apache License 2.0"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ff0099cc" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="bcprov"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/link_bc_lic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bc license"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ff0099cc" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Directory Picker"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/link_dirpick_lic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MIT License"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ff0099cc" />
+
+</LinearLayout>
