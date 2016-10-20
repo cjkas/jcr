@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cz.slaw.jcr"
+    android:versionCode="4"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+   	<uses-permission android:name="com.android.vending.BILLING" />
+
+   <application
+        android:name="cz.slaw.jcr.AppBootConfig"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name_full"
+        android:theme="@style/AppTheme" >
+		<activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+       <service android:name="cz.slaw.jcr.listeners.PhoneListenerService" />
+		
+        <activity android:name="cz.slaw.jcr.RecordDetailActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.slaw.jcr.MainActivity" />
+        </activity>
+        <activity
+            android:name="cz.slaw.jcr.RecordHistoryActivity"
+            android:label="@string/ar_history" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.slaw.jcr.RecordDetailActivity" />
+        </activity>
+        <activity
+            android:name="cz.slaw.jcr.SettingsActivity"
+            android:configChanges="locale"
+            android:label="@string/settings" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.slaw.jcr.MainActivity" />
+        </activity>
+        <activity android:name="cz.slaw.jcr.MainActivity" >
+            <intent-filter android:priority="1" >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="net.bgreco.DirectoryPicker" android:label="@string/pref_record_destination">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.slaw.jcr.SettingsActivity" />
+        </activity>
+        <activity android:name="cz.slaw.jcr.DropboxActivity" android:label="@string/pref_dropbox" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.slaw.jcr.SettingsActivity" />
+        </activity>
+        <activity android:name="cz.slaw.jcr.GoogleDriveActivity" android:label="@string/pref_gdrive" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.slaw.jcr.SettingsActivity" />
+        </activity>
+        <activity android:name="cz.slaw.jcr.AboutActivity" android:label="@string/pref_show_about" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.slaw.jcr.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.dropbox.client2.android.AuthActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask" >
+            <intent-filter>
+
+                <!-- Change this to be db- followed by your app key -->
+                <data android:scheme="db-4fm1y1621bjb683" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cz.slaw.jcr.AudioPlayerActivity"
+            	android:label="@string/ar_play"
+            >
+			<meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.slaw.jcr.MainActivity" />            
+        </activity>
+        <activity android:name="cz.slaw.jcr.MagicAppRestart" >
+        </activity>
+		<!--  <service android:name="cz.slaw.jcr.floating.SimpleWindow"/>  -->
+		
+        <receiver
+            android:name="cz.slaw.jcr.listeners.NetworkStateChanged"
+            android:label="NetworkStateChanged" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="cz.slaw.jcr.listeners.StartRecordService"
+            android:label="StartRecordService" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+          Optionally, register AnalyticsReceiver and AnalyticsService to support background
+          dispatching on non-Google Play devices
+        -->
+        <receiver
+            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+ 
+        <service
+            android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false" />
+ 
+        <!--
+             Optionally, register CampaignTrackingReceiver and CampaignTrackingService to enable
+             installation campaign reporting
+        -->
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+ 
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+        
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
